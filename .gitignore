@@ -1,2 +1,5 @@
+.scannerwork/
+coverage/
+docker/
 node_modules/
 sonarqube.txt

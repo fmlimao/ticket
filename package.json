@@ -1,0 +1,40 @@
+{
+  "name": "ticket",
+  "version": "1.0.0",
+  "description": "Projeto para controle de ticket",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch --silent --colors --noStackTrace",
+    "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStackTrace",
+    "prepare": "husky install"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "npm run test:staged"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fmlimao/ticket.git"
+  },
+  "keywords": [],
+  "author": "Leandro Macedo <fmlimao@gmail.com> (http://github.com/fmlimao)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fmlimao/ticket/issues"
+  },
+  "homepage": "https://github.com/fmlimao/ticket#readme",
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.6",
+    "standard": "^16.0.4",
+    "supertest": "^6.1.6"
+  }
+}

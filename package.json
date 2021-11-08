@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --watch",
     "test:silent": "jest --watch --silent --colors --noStackTrace",
-    "test:staged": "jest --passWithNoTests --findRelatedTests --silent --noStackTrace",
+    "test:staged": "jest --coverage --passWithNoTests --findRelatedTests --silent --noStackTrace",
     "test:ci": "jest --coverage --silent --noStackTrace",
     "prepare": "husky install",
     "sonar":  "node sonar-project.js"
@@ -19,7 +19,8 @@
   "lint-staged": {
     "*.js": [
       "standard --fix",
-      "npm run test:staged"
+      "npm run test:staged",
+      "npm run sonar"
     ]
   },
   "jestSonar": {

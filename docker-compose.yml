@@ -1,0 +1,14 @@
+version:  '3'
+
+services:
+  sonarqube:
+    container_name:  ticket-sonarqube
+    image:  sonarqube:latest
+    ports:
+      -  "9000:9000"
+      -  "9092:9092"
+    volumes:
+      -  ./docker/sonarqube/data:/opt/sonarqube/data
+      -  ./docker/sonarqube/logs:/opt/sonarqube/logs
+      -  ./docker/sonarqube/conf:/opt/sonarqube/conf
+      -  ./docker/sonarqube/extensions:/opt/sonarqube/extensions

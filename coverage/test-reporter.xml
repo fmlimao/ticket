@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+    <file path="/home/lmacedo/Documents/projects/personal/github/ticket/api/src/tests/api.test.js">
+        <testCase name="Testando Usuario Testando nome" duration="2"/>
+        <testCase name="Testando Usuario Testando idade" duration="0"/>
+    </file>
+</testExecutions>

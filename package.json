@@ -4,12 +4,13 @@
   "description": "Projeto para controle de ticket",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
-    "test:silent": "jest --watch --silent --colors --noStackTrace",
-    "test:staged": "jest --coverage --passWithNoTests --findRelatedTests --silent --noStackTrace",
-    "test:ci": "jest --coverage --silent --noStackTrace",
-    "prepare": "husky install",
-    "sonar":  "node sonar-project.js"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:watch:silent": "jest --watch --silent --noStackTrace --colors",
+    "test:staged": "jest --silent --noStackTrace --passWithNoTests --findRelatedTests --coverage",
+    "test:ci": "jest --silent --noStackTrace --coverage",
+    "sonar":  "node sonar-project.js",
+    "prepare": "husky install"
   },
   "standard": {
     "env": [
@@ -19,8 +20,7 @@
   "lint-staged": {
     "*.js": [
       "standard --fix",
-      "npm run test:staged",
-      "npm run sonar"
+      "npm run test:staged"
     ]
   },
   "jestSonar": {
